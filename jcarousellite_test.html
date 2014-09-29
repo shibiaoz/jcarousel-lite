@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jcarousel lite demo</title>
+	<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript" src="jquery.jcarousellite.js"></script>
+	<style type="text/css">
+		.slide_wraper{
+			width: 1200px;
+			height: 400px;
+			overflow: hidden; 
+			position: relative;
+		}
+		.slide_wraper button{
+			position: absolute;
+			z-index: 2;
+			top: 20%;
+		}
+		.slide_wraper .prev{
+			left: 0;
+		}
+		.slide_wraper .next{
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="slide_wraper">
+		<div class="jcarousel carousel_wraper">
+			<ul>
+				<li>1<img src="img1.jpg" width="300" height="200" ></li>
+				<li>2<img src="img2.jpg" width="300" height="200"></li>
+				<li>3<img src="img3.jpg" width="300" height="200"></li>
+				<li>4<img src="img4.jpg" width="300" height="200"></li>
+			</ul>
+		</div>
+		<button class="prev j_prev">	&laquo;</button>
+		<button class="next j_next">	&raquo;</button>	
+	</div>
+	<script type="text/javascript">
+		$(function  () {
+			 $(".jcarousel").jCarouselLite({
+		        btnNext: ".j_next",
+		        btnPrev: ".j_prev",
+		       // auto:1000,
+		        speed:500
+		    });
+		});
+	</script>
+</body>
+</html>
